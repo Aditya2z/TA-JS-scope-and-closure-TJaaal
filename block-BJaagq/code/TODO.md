@@ -19,7 +19,7 @@ console.log(species); // 2
 
 <!-- Put your image below -->
 
-![](./img/image-name.jpg)
+![](./img/1.png)
 
 - Create the execution context diagram
 - What will be the value of species on 1 and 2
@@ -38,7 +38,7 @@ function topLevelFn() {
     console.log(localVar); // 1
     console.log(topLevelVar); // 2
   }
-
+ 
   nestedFn();
 }
 
@@ -47,7 +47,7 @@ topLevelFn();
 
 <!-- Put your image below -->
 
-![](./img/image-name.jpg)
+![](./img/2.png)
 
 - Create the execution context diagram
 - What will be the value of 1 and 2
