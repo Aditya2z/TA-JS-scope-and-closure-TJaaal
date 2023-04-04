@@ -28,10 +28,10 @@ function getCounter() {
 
 let counter = getCounter();
 
-counter(); // output
-counter(); // output
-counter(); // output
-counter(); // output
+counter(); // output 1
+counter(); // output 2 
+counter(); // output 3
+counter(); // output 4
 ```
 
 3. Create the execution context diagram
@@ -44,10 +44,14 @@ function makeColorChanger(color) {
 }
 
 let blue = makeColorChanger('blue');
-let tomato = makeColorChanger('tomato');
+let tomato = makeColorChanger('tomato'); 
 
 blue();
 tomato();
 
-// What will be the background color after the execution of last line
+// What will be the background color after the execution of last line : Tomato
 ```
+![alt text](./img/WhatsApp%20Image%202023-04-04%20at%2010.18.04%20AM.jpeg)
+![alt text](./img/WhatsApp%20Image%202023-04-04%20at%2010.34.04%20AM.jpeg)
+![alt text](./img/WhatsApp%20Image%202023-04-04%20at%2012.19.29%20PM.jpeg)
+
