@@ -1,6 +1,7 @@
 Create the execution context diagram for following code. What will be the output in each line of code
 
 ```js
+//j
 function getCounter() {
   let privateCounter = 0;
   function changeBy(val) {
