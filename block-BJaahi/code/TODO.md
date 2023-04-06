@@ -107,6 +107,27 @@ var nextMessage = sayHello('Test');
 
 ```js
 // Your code goes here
+//Declaration phase
+var username = 'undefined';
+let number;
+
+let sayHello;
+
+let message;
+var nextMessage = undefined;
+
+//Execution phase
+console.log(username, numbers);
+
+username = 'Arya';
+number = 21;
+
+sayHello = function (name) {
+  return `Hello ${name}`;
+};
+
+message = sayHello(username);
+nextMessage = sayHello('Test');
 ```
 
 4.
@@ -129,6 +150,27 @@ var nextMessage = sayHello('Test');
 
 ```js
 // Your code goes here
+// Declaration
+let username;
+
+let number;
+let message;
+
+let sayHello;
+
+var nextMessage = undefined;
+//Execution
+username = 'Arya';
+console.log(username, numbers);
+
+number = 21;
+message = sayHello(username);
+
+sayHello = function (name) {
+  return `Hello ${name}`;
+};
+
+nextMessage = sayHello('Test');
 ```
 
 5.
@@ -144,6 +186,14 @@ let age = 21;
 
 ```js
 // Your code goes here
+//declaration phase
+var name = undefined;
+let age;
+//execution phase
+console.log(name);
+console.log(age);
+name = 'Lydia';
+age = 21;
 ```
 
 6.
@@ -163,6 +213,15 @@ sayHi();
 
 ```js
 // Your code goes here
+//declaration phase
+function sayHi(name) {
+  console.log(name);
+  console.log(age);
+  var name = 'Lydia';
+  let age = 21;
+}
+//execution phase
+sayHi();
 ```
 
 7.
