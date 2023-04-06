@@ -13,7 +13,7 @@ console.log(
   window.firstName,
   window.lastName,
   window.knownAs
-);
+);// undefined, undefined, 'no one'
 ```
 
 2. Guess the output:
@@ -27,7 +27,7 @@ function fullName(a, b) {
   return a + b;
 }
 
-console.log(window.fullName(firstName, lastName));
+console.log(window.fullName(firstName, lastName)); //"AryaStark"
 ```
 
 3. Make a Execution Context Diagram for the following JS and write the output.
@@ -95,7 +95,7 @@ function isAwesome() {
   }
   console.log(awesome);
 }
-isAwesome();
+isAwesome();// undefined;
 ```
 
 9. What will be the output of the following
@@ -108,7 +108,7 @@ function isAwesome() {
   }
   console.log(awesome);
 }
-isAwesome();
+isAwesome(); // true
 ```
 
 10. What will be the output of the following
@@ -121,7 +121,7 @@ function isAwesome() {
   }
   console.log(awesome);
 }
-isAwesome();
+isAwesome(); // undefined
 ```
 
 11. What will be the output of the following
@@ -135,7 +135,7 @@ function fullName(a, b) {
   return a + b;
 }
 const name = fullName(firstName, lastName);
-console.log(name);
+console.log(name); // "AryaStark"
 ```
 
 12. Guess the output of the code below with a reason.
@@ -146,7 +146,7 @@ function sayHello() {
 }
 sayHello();
 
-console.log(name);
+console.log(name);  // Refrence Error "let creates block scoped variable which can't be accessed from outside that block"
 ```
 
 13. Guess the output of the code below with a reason.
@@ -155,7 +155,7 @@ console.log(name);
 if (true) {
   var name = 'Arya Stark';
 }
-console.log(name);
+console.log(name); //// Refrence Error "var creates functional scoped variable which can't be accessed from outside that function"
 ```
 
 14. Guess the output of the code below with a reason.
@@ -164,7 +164,7 @@ console.log(name);
 if (true) {
   let name = 'Arya Stark';
 }
-console.log(name);
+console.log(name);  // Refrence Error "let creates block scoped variable which can't be accessed from outside that block"
 ```
 
 15. Guess the output of the code below with a reason.
@@ -173,7 +173,7 @@ console.log(name);
 for (var i = 0; i < 20; i++) {
   //
 }
-console.log(i);
+console.log(i); // 20 
 ```
 
 16. Guess the output of the code below with a reason.
@@ -182,7 +182,7 @@ console.log(i);
 for (let i = 0; i < 20; i++) {
   //
 }
-console.log(i);
+console.log(i); // Refrence Error "let creates block scoped variable which can't be accessed from outside that block"
 ```
 
 17. Guess the output and the reason behind that.
@@ -194,7 +194,7 @@ function sample() {
   }
   console.log(username);
 }
-sample();
+sample(); // 'John Snow'
 ```
 
 18. Guess the output and the reason behind that.
@@ -204,7 +204,7 @@ function sample() {
   if (true) {
     let username = 'John Snow';
   }
-  console.log(username);
+  console.log(username); // Refrence Error
 }
 sample();
 ```
@@ -220,7 +220,7 @@ function sample() {
   }
   console.log(username, 'second');
 }
-sample();
+sample(); // John Snow; John Snow, 'second'
 ```
 
 20. Guess the output and the reason behind that.
@@ -234,7 +234,8 @@ function sample() {
   }
   console.log(username, 'second');
 }
-sample();
+sample(); //John Snow first
+// Arya Stark second
 ```
 
 21. Guess the output and the reason behind that.
@@ -247,7 +248,9 @@ function sample(...args) {
   }
 }
 
-sample('First', 'Second', 'Third');
+sample('First', 'Second', 'Third'); //Hello I am First
+// Hello I am Second
+// Hello I am Third
 ```
 
 22. Guess the output and the reason behind that.
@@ -260,7 +263,9 @@ function sample(...args) {
   }
 }
 
-sample('First', 'Second', 'Third');
+sample('First', 'Second', 'Third'); //Hello I am First
+// Hello I am Second
+// Hello I am Third
 ```
 
 23. Guess the output and the reason behind that.
@@ -270,9 +275,9 @@ if (true) {
   const myFunc = function () {
     console.log(username, 'Second');
   };
-  console.log(username, 'First');
-  let username = 'Hello World!';
-  myFunc();
+  console.log(username, 'First'); // ReferenceError: Cannot access 'username' before initialization
+  let username = 'Hello World!'; 
+  myFunc(); // "Hello World!", 'Second'
 }
 ```
 
@@ -289,7 +294,7 @@ function outer() {
   inner();
 }
 
-outer();
+outer(); //I love this movie called MAD MAX: FURY ROAD
 ```
 
 25. Guess the output and the reason behind that.
@@ -306,7 +311,7 @@ function outer() {
   inner();
 }
 
-outer();
+outer(); //I love this movie called BEFORE SUNRISE
 ```
 
 26. Guess the output and the reason behind that.
@@ -326,7 +331,7 @@ function outer() {
   }
   inner();
 }
-outer();
+outer(); //I love this movie called GONE GIRL
 ```
 
 30. Using reduce find the final value when the initial value passed is `100`. You have to pass the output of one function into the input of next function in the array `allFunctions` starts with `addOne` ends with `half`.
@@ -353,6 +358,11 @@ let allFunctions = [
   multiplyThree,
   half,
 ];
+
+let answer = allFunctions.reduce(((acc, cv) => {
+  acc = cv(acc);
+  return acc;
+}), 100)
 
 // Answer is: 447
 ```
